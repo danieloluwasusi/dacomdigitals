@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dacom Digitals Ltd - Become a Certified Data Analyst in 9 Weeks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1a2d5a;--navy2:#0f1e3e;--navy3:#243570;
+  --blue:#1e5fd4;--blue-h:#1750b8;--blue-l:#e8f0fd;--blue-m:#b3ccf8;
+  --gold:#f4a11a;--gold-l:#fff8e6;--green:#0ba865;--green-l:#e5f9f0;
+  --rose:#e53e52;--rose-l:#fef0f2;
+  --ink:#0d1420;--ink2:#1e2740;--ink3:#4a5270;--ink4:#8590a8;
+  --line:#dde2ef;--bg:#fff;--bg2:#f5f7fc;--bg3:#eef1f9;
+  --r2:8px;--r3:12px;--r4:18px;--r5:24px;--r6:32px;
+  --s1:0 1px 4px rgba(26,45,90,.08);--s2:0 4px 20px rgba(26,45,90,.10);
+  --s3:0 10px 40px rgba(26,45,90,.13);--s4:0 20px 60px rgba(26,45,90,.16);
+  --s-blue:0 8px 28px rgba(30,95,212,.28);--s-navy:0 8px 28px rgba(26,45,90,.35);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.65;overflow-x:hidden}
+h1,h2,h3,h4,h5{font-family:'Bricolage Grotesque',sans-serif;line-height:1.12}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:'Nunito',sans-serif}
+ul{list-style:none}
+#nav{position:fixed;top:0;left:0;right:0;z-index:900;height:68px;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(20px);display:flex;align-items:center;transition:box-shadow .2s}
+#nav.scrolled{box-shadow:0 2px 24px rgba(26,45,90,.1)}
+.nav-w{max-width:1280px;margin:0 auto;padding:0 2rem;width:100%;display:flex;align-items:center;gap:1.5rem}
+.logo-wrap{display:flex;align-items:center;gap:.55rem;cursor:pointer;flex-shrink:0}
+.logo-mark{width:36px;height:36px}
+.lt-top{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.1rem;color:var(--navy);letter-spacing:-.02em;display:block}
+.lt-sub{font-size:.58rem;font-weight:600;color:var(--ink4);letter-spacing:.06em;text-transform:uppercase;display:block}
+.nav-links{display:flex;gap:.1rem;margin-left:.5rem}
+.nav-links a{padding:.38rem .8rem;border-radius:var(--r2);font-size:.875rem;font-weight:600;color:var(--ink3);cursor:pointer;transition:.15s}
+.nav-links a:hover{color:var(--navy);background:var(--bg2)}
+.nav-links a.on{color:var(--blue);background:var(--blue-l);font-weight:700}
+.nav-r{margin-left:auto;display:flex;align-items:center;gap:.6rem}
+.btn-ghost{padding:.4rem 1rem;border-radius:var(--r2);border:1.5px solid var(--line);background:transparent;font-size:.85rem;font-weight:700;color:var(--ink2);transition:.15s}
+.btn-ghost:hover{border-color:var(--navy);color:var(--navy)}
+.btn-enroll{padding:.42rem 1.3rem;border-radius:var(--r2);border:none;background:var(--navy);color:#fff;font-size:.85rem;font-weight:700;box-shadow:0 2px 10px rgba(26,45,90,.28);transition:.15s}
+.btn-enroll:hover{background:var(--navy3);transform:translateY(-1px)}
+.ham{display:none;flex-direction:column;gap:5px;padding:.4rem;cursor:pointer;margin-left:auto}
+.ham span{width:22px;height:2px;background:var(--navy);border-radius:2px;display:block}
+section{display:none;padding-top:68px;min-height:100vh}
+section.on{display:block;animation:pgIn .32s ease both}
+@keyframes pgIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.w{max-width:1280px;margin:0 auto;padding:0 2rem}
+.tag{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:.6rem}
+.h2{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;letter-spacing:-.03em;margin-bottom:.7rem;line-height:1.1}
+.sub{color:var(--ink3);font-size:.975rem;line-height:1.75;max-width:520px}
+.chip{display:inline-flex;align-items:center;gap:.28rem;padding:.2rem .7rem;border-radius:50px;font-size:.7rem;font-weight:700}
+.c-white{background:rgba(255,255,255,.18);color:#fff}
+.c-gold{background:var(--gold-l);color:var(--gold)}
+.c-green{background:var(--green-l);color:var(--green)}
+.btn-n{display:inline-flex;align-items:center;gap:.45rem;padding:.72rem 1.6rem;border-radius:var(--r2);border:none;background:var(--navy);color:#fff;font-size:.9rem;font-weight:700;box-shadow:var(--s-navy);transition:.15s;cursor:pointer}
+.btn-n:hover{background:var(--navy3);transform:translateY(-2px)}
+.btn-s{display:inline-flex;align-items:center;gap:.45rem;padding:.72rem 1.6rem;border-radius:var(--r2);border:1.5px solid var(--line);background:#fff;color:var(--ink2);font-size:.9rem;font-weight:600;transition:.15s;cursor:pointer}
+.btn-s:hover{border-color:var(--navy);color:var(--navy)}
+.btn-xl{padding:.9rem 2rem;font-size:1rem}
+.hover-card{transition:box-shadow .2s,transform .2s}
+.hover-card:hover{box-shadow:var(--s3);transform:translateY(-4px)}
+.hero{background:var(--bg);padding:5rem 0 0;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 60% at 92% 25%,rgba(30,95,212,.07) 0%,transparent 60%)}
+.hero-dots{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(26,45,90,.1) 1px,transparent 1px);background-size:32px 32px;mask-image:radial-gradient(ellipse 100% 70% at 50% 0%,black 20%,transparent 75%);opacity:.5}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:2;padding:0 2rem 4.5rem;max-width:1280px;margin:0 auto}
+.urgency-bar{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:1px solid var(--line);border-radius:50px;padding:.28rem 1rem;font-size:.75rem;font-weight:700;color:var(--ink2);box-shadow:var(--s1);margin-bottom:1.4rem}
+.u-dot{width:7px;height:7px;background:#22c55e;border-radius:50%;animation:pulse 2s infinite;display:inline-block}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.7)}}
+.hero-h1{font-size:clamp(2.3rem,4.5vw,3.5rem);font-weight:800;letter-spacing:-.04em;line-height:1.07;margin-bottom:1.2rem;color:var(--ink)}
+.hero-h1 .accent{color:var(--blue)}
+.hero-h1 .underlined{position:relative;display:inline-block}
+.hero-h1 .underlined::after{content:'';position:absolute;bottom:-5px;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--navy),var(--blue));border-radius:2px}
+.hero-p{font-size:1.05rem;color:var(--ink3);line-height:1.75;max-width:450px;margin-bottom:2rem}
+.hero-acts{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2.25rem}
+.sproof{display:flex;align-items:center;gap:1rem;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r4);padding:.9rem 1.15rem;max-width:400px}
+.av-stack{display:flex}
+.av{width:32px;height:32px;border-radius:50%;border:2.5px solid #fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.6rem;font-family:'Bricolage Grotesque',sans-serif;color:#fff;margin-left:-8px}
+.av:first-child{margin-left:0}
+.proof-txt{font-size:.8rem;color:var(--ink3)}
+.proof-txt strong{color:var(--ink);font-weight:700}
+.stars{color:#f59e0b;font-size:.7rem}
+.hero-card{background:#fff;border:1px solid var(--line);border-radius:var(--r6);box-shadow:var(--s4);overflow:hidden}
+.hc-top{background:linear-gradient(145deg,#0d1e3e 0%,#1a2d5a 50%,#1e3d7a 100%);padding:2rem;position:relative;overflow:hidden}
+.hc-logo{display:flex;align-items:center;gap:.5rem;margin-bottom:1.25rem;position:relative;z-index:1}
+.hc-logo-mark{width:28px;height:28px}
+.hc-logo-name{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:.85rem;color:#fff}
+.hc-logo-name span{color:rgba(255,255,255,.55);font-size:.7rem;display:block;font-weight:600}
+.hc-title{font-family:'Bricolage Grotesque',sans-serif;font-size:1.15rem;font-weight:800;color:#fff;margin-bottom:.2rem;position:relative;z-index:1}
+.hc-sub{font-size:.8rem;color:rgba(255,255,255,.6);position:relative;z-index:1}
+.hc-dates{margin-top:1rem;position:relative;z-index:1;display:flex;gap:.75rem;flex-wrap:wrap}
+.hc-date-chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.15);border-radius:50px;padding:.25rem .7rem;font-size:.7rem;font-weight:700;color:#fff}
+.hc-body{padding:1.25rem}
+.hc-price-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;padding:.75rem;background:var(--bg2);border-radius:var(--r3);border:1px solid var(--line)}
+.hc-price-item{text-align:center}
+.hc-price-item .currency{font-size:.62rem;color:var(--ink4);display:block;margin-bottom:.15rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.hc-price-item .amount{font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem;font-weight:800;color:var(--navy)}
+.hc-div{height:1px;background:var(--line);margin:.75rem 0}
+.module-pills{display:flex;flex-wrap:wrap;gap:.4rem}
+.mp{padding:.35rem .7rem;border-radius:var(--r2);background:var(--bg2);border:1px solid var(--line);font-size:.76rem;font-weight:600;color:var(--ink2)}
+.fchip{position:absolute;background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:.5rem .9rem;box-shadow:var(--s3);font-size:.74rem;font-weight:700;color:var(--ink2)}
+.fc1{top:-20px;right:20px;animation:bob 3.5s ease-in-out infinite .5s}
+.fc2{bottom:30px;left:-30px;animation:bob 3.5s ease-in-out infinite 1.8s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.stats-bar{background:var(--navy2);padding:1.5rem 0}
+.stats-row{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;max-width:1280px;margin:0 auto;padding:0 2rem}
+.stat{display:flex;align-items:center;gap:.7rem;padding:0 3rem;border-right:1px solid rgba(255,255,255,.1);flex-shrink:0}
+.stat:last-child{border-right:none}
+.stat-icon{font-size:1.3rem}
+.stat-num{font-family:'Bricolage Grotesque',sans-serif;font-size:1.5rem;font-weight:800;color:#fff;line-height:1}
+.stat-lbl{font-size:.7rem;color:rgba(255,255,255,.45);margin-top:.1rem}
+.countries-sec{padding:2.25rem 0;border-bottom:1px solid var(--line)}
+.countries-row{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+.c-label{font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink4);white-space:nowrap}
+.flags{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center}
+.flag-item{display:flex;align-items:center;gap:.45rem;font-size:.8rem;font-weight:600;color:var(--ink3)}
+.hiw-sec{padding:5.5rem 0;background:var(--bg)}
+.hiw-header{text-align:center;margin-bottom:3.75rem}
+.hiw-header .sub{margin:0 auto}
+.hiw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.75rem}
+.hiw-card{text-align:center;padding:2rem 1.4rem;border-radius:var(--r5);background:#fff;border:1px solid var(--line);position:relative}
+.hiw-card:not(:last-child)::after{content:'>';position:absolute;top:2.5rem;right:-1rem;font-size:1.2rem;color:var(--line);z-index:1}
+.hiw-num{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.7rem;display:block}
+.hiw-icon{width:54px;height:54px;border-radius:var(--r4);background:var(--blue-l);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto .85rem;transition:transform .2s}
+.hiw-card:hover .hiw-icon{transform:scale(1.1)}
+.hiw-card h4{font-family:'Bricolage Grotesque',sans-serif;font-size:.95rem;font-weight:700;margin-bottom:.4rem}
+.hiw-card p{font-size:.82rem;color:var(--ink3);line-height:1.65}
+.outcomes-sec{padding:5rem 0;background:var(--navy2);position:relative;overflow:hidden}
+.outcomes-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1}
+.oi-left .tag{color:rgba(255,255,255,.55)}
+.oi-left .h2{color:#fff}
+.oi-left .sub{color:rgba(255,255,255,.65)}
+.outcome-list{display:flex;flex-direction:column;gap:.65rem;margin-top:1.75rem}
+.outcome-item{display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;background:rgba(255,255,255,.07);border-radius:var(--r2);border:1px solid rgba(255,255,255,.1);font-size:.875rem;color:rgba(255,255,255,.88);font-weight:500}
+.oi-check{color:#34d399;font-size:.9rem;flex-shrink:0}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.sg-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--r4);padding:1.5rem 1.25rem}
+.sg-num{font-family:'Bricolage Grotesque',sans-serif;font-size:2rem;font-weight:800;color:#fff;line-height:1}
+.sg-lbl{font-size:.75rem;color:rgba(255,255,255,.45);margin-top:.3rem}
+.lead-sec{padding:5.5rem 0;background:linear-gradient(145deg,#1a2d5a 0%,#243570 60%,#1e5fd4 100%);position:relative;overflow:hidden}
+.lead-inner{max-width:660px;margin:0 auto;padding:0 2rem;text-align:center;position:relative;z-index:1}
+.lead-inner .tag{color:rgba(255,255,255,.55)}
+.lead-inner .h2{color:#fff}
+.lead-inner .sub{color:rgba(255,255,255,.65);margin:0 auto 1.5rem}
+.cd-box{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:var(--r3);padding:1.1rem 1.5rem;margin-bottom:1.75rem}
+.cd-lbl{font-size:.7rem;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.85rem;display:flex;align-items:center;justify-content:center;gap:.4rem}
+.cdot{width:6px;height:6px;background:#f87171;border-radius:50%;animation:pulse 1.5s infinite;display:inline-block}
+.timer{display:flex;gap:.6rem;justify-content:center;align-items:flex-end}
+.tu .tn{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.7rem;color:#fff;background:rgba(255,255,255,.1);border-radius:var(--r2);padding:.35rem .6rem;min-width:50px;text-align:center;display:block;line-height:1}
+.tsep{font-size:1.4rem;color:rgba(255,255,255,.3);padding-bottom:.4rem}
+.tl{font-size:.57rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.08em;margin-top:.25rem;text-align:center}
+.lead-form{display:flex;gap:.5rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:var(--r3);padding:.35rem;max-width:460px;margin:0 auto}
+.lead-form input{flex:1;background:transparent;border:none;outline:none;padding:.45rem .7rem;font-size:.9rem;color:#fff;font-family:'Nunito',sans-serif}
+.lead-form input::placeholder{color:rgba(255,255,255,.45)}
+.lead-form button{padding:.6rem 1.3rem;border-radius:var(--r2);border:none;background:#fff;color:var(--navy);font-weight:800;font-size:.85rem;font-family:'Nunito',sans-serif;white-space:nowrap;cursor:pointer}
+.lead-perks{display:flex;justify-content:center;gap:1.75rem;margin-top:1.25rem;flex-wrap:wrap}
+.lp{font-size:.76rem;color:rgba(255,255,255,.6)}
+.pg-hero{padding:4.5rem 0 3rem;background:var(--bg2);border-bottom:1px solid var(--line)}
+.pg-hero-c{max-width:660px;margin:0 auto;padding:0 2rem;text-align:center}
+.pg-hero-c .sub{margin:0 auto}
+.founder-sec{padding:5rem 0;background:var(--bg)}
+.founder-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:center}
+.founder-card{background:var(--navy);border-radius:var(--r6);overflow:hidden}
+.fc-header{padding:2.5rem 2rem 1.5rem;position:relative}
+.fc-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#1e5fd4,#00b4d8);display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.75rem;color:#fff;margin-bottom:1.25rem;border:3px solid rgba(255,255,255,.15);position:relative;z-index:1;overflow:hidden}
+.fc-name{font-family:'Bricolage Grotesque',sans-serif;font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:.2rem}
+.fc-title{font-size:.8rem;color:rgba(255,255,255,.6);font-weight:600}
+.fc-badges{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem}
+.fc-body{padding:1.5rem 2rem 2rem}
+.fc-stats-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.75rem;margin-bottom:1.25rem}
+.fcs{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--r3);padding:.75rem;text-align:center}
+.fcs-n{font-family:'Bricolage Grotesque',sans-serif;font-size:1.3rem;font-weight:800;color:#fff;line-height:1}
+.fcs-l{font-size:.62rem;color:rgba(255,255,255,.4);margin-top:.2rem}
+.founder-bio{font-size:.94rem;color:var(--ink3);line-height:1.8;margin-bottom:1.25rem}
+.cred-list{display:flex;flex-direction:column;gap:.6rem;margin-bottom:2rem}
+.cred-item{display:flex;align-items:flex-start;gap:.75rem;padding:.75rem 1rem;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r3)}
+.cred-icon{font-size:1.1rem;flex-shrink:0;margin-top:.05rem}
+.cred-text{font-size:.83rem;color:var(--ink2);line-height:1.6}
+.cred-text strong{color:var(--ink);font-weight:700;font-family:'Bricolage Grotesque',sans-serif}
+.vals-sec{padding:4.5rem 0;background:var(--bg2)}
+.vals-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.val-card{background:#fff;border:1px solid var(--line);border-radius:var(--r4);padding:1.6rem}
+.val-ic{font-size:1.5rem;margin-bottom:.6rem}
+.val-card h4{font-family:'Bricolage Grotesque',sans-serif;font-size:.92rem;font-weight:700;margin-bottom:.35rem}
+.val-card p{font-size:.82rem;color:var(--ink3);line-height:1.62}
+.prog-hero{padding:4.5rem 0 3rem;background:var(--bg2);border-bottom:1px solid var(--line)}
+.prog-hero-c{max-width:1280px;margin:0 auto;padding:0 2rem}
+.programme-sec{padding:4.5rem 0;background:var(--bg)}
+.prog-card{background:#fff;border:1px solid var(--line);border-radius:var(--r6);overflow:hidden;box-shadow:var(--s2)}
+.pc-hero{background:linear-gradient(145deg,#0d1e3e 0%,#1a2d5a 55%,#1e3d7a 100%);padding:3rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;position:relative;overflow:hidden}
+.pc-hero-l .tag{color:rgba(255,255,255,.55)}
+.pc-hero-l h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.5rem,2.5vw,2.1rem);font-weight:800;color:#fff;margin-bottom:.4rem}
+.pc-hero-l p{color:rgba(255,255,255,.65);font-size:.9rem;max-width:420px}
+.pc-hero-r{text-align:right;flex-shrink:0;position:relative;z-index:1}
+.pc-dur{font-family:'Bricolage Grotesque',sans-serif;font-size:2.5rem;font-weight:800;color:#fff;line-height:1}
+.pc-dur-lbl{font-size:.75rem;color:rgba(255,255,255,.5);margin-top:.2rem}
+.pc-chips{display:flex;gap:.4rem;margin-top:.85rem;flex-wrap:wrap}
+.curriculum-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.cur-col{padding:2rem 1.75rem;border-right:1px solid var(--line)}
+.cur-col:last-child{border-right:none}
+.cur-tool{display:flex;align-items:center;gap:.5rem;margin-bottom:.65rem}
+.cur-tool-icon{width:36px;height:36px;border-radius:var(--r2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.cur-tool h4{font-family:'Bricolage Grotesque',sans-serif;font-size:.92rem;font-weight:800;color:var(--ink)}
+.cur-topics{display:flex;flex-direction:column;gap:.35rem}
+.ct{display:flex;gap:.38rem;font-size:.78rem;color:var(--ink2);line-height:1.4}
+.ck{color:var(--green);font-weight:700;flex-shrink:0;margin-top:.08rem}
+.prog-details{padding:2rem 1.75rem;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.pd-item{padding:0 1.75rem;border-right:1px solid var(--line);display:flex;align-items:flex-start;gap:.7rem}
+.pd-item:first-child{padding-left:0}
+.pd-item:last-child{border-right:none}
+.pd-icon{font-size:1.25rem;margin-top:.1rem;flex-shrink:0}
+.pd-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink4);margin-bottom:.2rem}
+.pd-val{font-size:.875rem;font-weight:700;color:var(--ink);font-family:'Bricolage Grotesque',sans-serif}
+.pd-sub{font-size:.73rem;color:var(--ink3)}
+.pricing-sec{padding:0 0 3rem;background:var(--bg)}
+.pricing-inner{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r5);padding:2.5rem}
+.pricing-title{font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem;font-weight:800;margin-bottom:.25rem}
+.pricing-sub{font-size:.83rem;color:var(--ink3);margin-bottom:1.75rem}
+.price-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.price-card{background:#fff;border:1.5px solid var(--line);border-radius:var(--r4);padding:1.5rem;text-align:center;transition:.2s}
+.price-card:hover{border-color:var(--navy);box-shadow:var(--s2)}
+.price-card.featured{border-color:var(--navy);background:var(--navy)}
+.price-flag{font-size:1.5rem;margin-bottom:.5rem}
+.price-country{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink4);margin-bottom:.4rem}
+.price-card.featured .price-country{color:rgba(255,255,255,.6)}
+.price-amount{font-family:'Bricolage Grotesque',sans-serif;font-size:1.65rem;font-weight:800;color:var(--navy);line-height:1}
+.price-card.featured .price-amount{color:#fff}
+.price-currency{font-size:.72rem;color:var(--ink4);margin-top:.2rem;font-weight:600}
+.price-card.featured .price-currency{color:rgba(255,255,255,.5)}
+.enroll-btn{width:100%;margin-top:1rem;padding:.65rem;border-radius:var(--r2);border:none;background:var(--blue);color:#fff;font-family:'Nunito',sans-serif;font-weight:800;font-size:.85rem;cursor:pointer;transition:background .15s}
+.enroll-btn:hover{background:var(--blue-h)}
+.price-card.featured .enroll-btn{background:#fff;color:var(--navy)}
+.testi-hero{padding:4.5rem 0 3rem;background:var(--bg2);border-bottom:1px solid var(--line);text-align:center}
+.testi-hero-c{max-width:580px;margin:0 auto;padding:0 2rem}
+.testi-hero-c .sub{margin:0 auto}
+.rating-show{display:flex;align-items:center;justify-content:center;gap:2rem;margin-top:2rem;flex-wrap:wrap}
+.rb-big .rn{font-family:'Bricolage Grotesque',sans-serif;font-size:3rem;font-weight:800;color:var(--ink);line-height:1}
+.rb-big .rs{color:#f59e0b;font-size:1.1rem;margin:.25rem 0}
+.rb-big .rc{font-size:.75rem;color:var(--ink3)}
+.rbar-col{display:flex;flex-direction:column;gap:.3rem}
+.rbar-row{display:flex;align-items:center;gap:.45rem;font-size:.76rem;color:var(--ink3)}
+.rbar-s{color:#f59e0b;font-size:.68rem;width:60px}
+.rbar-t{flex:1;height:5px;background:var(--line);border-radius:50px;overflow:hidden;min-width:100px}
+.rbar-f{height:100%;background:#f59e0b;border-radius:50px}
+.ft-testi{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:4rem 0}
+.ft-card{max-width:800px;margin:0 auto;padding:0 2rem;text-align:center}
+.ft-q{font-size:clamp(1.05rem,2vw,1.35rem);font-style:italic;color:var(--ink2);line-height:1.75;margin-bottom:2rem;position:relative}
+.ft-auth{display:flex;align-items:center;justify-content:center;gap:.9rem}
+.ft-av{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#1a2d5a,#1e5fd4);display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;color:#fff;font-size:.95rem}
+.ft-nm{font-weight:700;font-size:.92rem;color:var(--ink)}
+.ft-rl{font-size:.78rem;color:var(--ink3)}
+.tgrid-sec{padding:5rem 0}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.tcard{background:#fff;border:1px solid var(--line);border-radius:var(--r4);padding:1.6rem;display:flex;flex-direction:column}
+.tcard:hover{box-shadow:var(--s2);transform:translateY(-3px)}
+.t-stars{color:#f59e0b;font-size:.8rem;margin-bottom:.85rem}
+.t-text{font-size:.855rem;color:var(--ink2);line-height:1.75;flex:1;margin-bottom:1rem}
+.t-auth{display:flex;align-items:center;gap:.7rem;padding-top:.9rem;border-top:1px solid var(--line)}
+.t-av{width:38px;height:38px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:.8rem;color:#fff}
+.t-nm{font-weight:700;font-size:.85rem;color:var(--ink)}
+.t-rl{font-size:.72rem;color:var(--ink3)}
+.t-pill{display:inline-flex;align-items:center;margin-top:.5rem;background:var(--green-l);color:var(--green);border-radius:50px;padding:.18rem .55rem;font-size:.68rem;font-weight:700}
+.blog-hero{padding:4.5rem 0 3rem;background:var(--bg2);border-bottom:1px solid var(--line)}
+.blog-hr{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.bgrid-sec{padding:5rem 0}
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.bcard{background:#fff;border:1px solid var(--line);border-radius:var(--r4);overflow:hidden;cursor:pointer}
+.bcard:hover{box-shadow:var(--s2);transform:translateY(-3px)}
+.bc-thumb{height:160px;display:flex;align-items:center;justify-content:center;font-size:3.5rem}
+.bc-body{padding:1.4rem}
+.bc-cat{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin-bottom:.4rem}
+.bc-title{font-family:'Bricolage Grotesque',sans-serif;font-size:.95rem;font-weight:700;line-height:1.4;margin-bottom:.4rem;color:var(--ink)}
+.bc-ex{font-size:.8rem;color:var(--ink3);line-height:1.65;margin-bottom:.9rem}
+.bc-meta{display:flex;gap:.9rem;font-size:.72rem;color:var(--ink4);padding-top:.7rem;border-top:1px solid var(--line)}
+.contact-hero{padding:4.5rem 0 3rem;background:var(--bg2);border-bottom:1px solid var(--line)}
+.contact-body{padding:5rem 0}
+.contact-grid{display:grid;grid-template-columns:5fr 7fr;gap:5rem;align-items:start}
+.ci-h3{font-family:'Bricolage Grotesque',sans-serif;font-size:1.25rem;font-weight:800;margin-bottom:.4rem}
+.ci-sub{font-size:.85rem;color:var(--ink3);line-height:1.7;margin-bottom:2rem}
+.ci-item{display:flex;gap:.9rem;align-items:flex-start;padding:.85rem 0;border-bottom:1px solid var(--line)}
+.ci-item:last-of-type{border-bottom:none}
+.ci-ic{width:38px;height:38px;border-radius:var(--r2);flex-shrink:0;background:var(--blue-l);display:flex;align-items:center;justify-content:center;font-size:.9rem}
+.ci-lb{font-size:.66rem;font-weight:700;color:var(--ink4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.15rem}
+.ci-val{font-size:.85rem;color:var(--ink2);font-weight:600}
+.wa-btn{display:inline-flex;align-items:center;gap:.55rem;background:#25d366;color:#fff;padding:.68rem 1.4rem;border-radius:var(--r2);font-weight:700;font-size:.85rem;border:none;cursor:pointer;margin-top:1.35rem;font-family:'Nunito',sans-serif}
+.wa-btn:hover{opacity:.88}
+.soc-row{display:flex;gap:.45rem;margin-top:1.1rem}
+.sb{width:36px;height:36px;border-radius:var(--r2);border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;font-size:.8rem;cursor:pointer;color:var(--ink3);transition:.15s}
+.sb:hover{border-color:var(--navy);color:var(--navy);background:var(--blue-l)}
+.cf-wrap{background:#fff;border:1px solid var(--line);border-radius:var(--r5);padding:2.25rem;box-shadow:var(--s1)}
+.cf-title{font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem;font-weight:800;margin-bottom:.25rem}
+.cf-sub{font-size:.8rem;color:var(--ink3);margin-bottom:1.85rem}
+.fg{display:flex;flex-direction:column;gap:.35rem;margin-bottom:.9rem}
+.fg label{font-size:.75rem;font-weight:700;color:var(--ink2)}
+.fg input,.fg textarea,.fg select{padding:.68rem .88rem;border-radius:var(--r2);border:1.5px solid var(--line);background:#fff;font-size:.875rem;color:var(--ink);font-family:'Nunito',sans-serif;outline:none;resize:none;transition:.15s}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(30,95,212,.07)}
+.fg textarea{min-height:105px}
+.fg select{cursor:pointer}
+.cf-2col{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.cf-submit{width:100%;padding:.8rem;border-radius:var(--r2);border:none;background:var(--navy);color:#fff;font-size:.9rem;font-weight:800;font-family:'Nunito',sans-serif;cursor:pointer}
+.cf-submit:hover{background:var(--navy3)}
+#form-ok{display:none;text-align:center;padding:2.25rem 1rem}
+#form-ok .fok-ic{font-size:2.75rem;margin-bottom:.85rem}
+#form-ok h4{font-family:'Bricolage Grotesque',sans-serif;font-size:1.15rem;font-weight:800;margin-bottom:.4rem}
+#form-ok p{color:var(--ink3);font-size:.855rem}
+footer{background:var(--navy2);color:rgba(255,255,255,.55)}
+.foot-grid{display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr;gap:3rem;max-width:1280px;margin:0 auto;padding:4rem 2rem}
+.foot-brand{display:flex;align-items:center;gap:.5rem;margin-bottom:.9rem;cursor:pointer}
+.foot-tagline{font-size:.8rem;line-height:1.7;max-width:235px;margin-bottom:1.4rem}
+.fsoc{display:flex;gap:.4rem}
+.fsb{width:32px;height:32px;border-radius:var(--r2);border:1px solid rgba(255,255,255,.12);background:transparent;display:flex;align-items:center;justify-content:center;font-size:.78rem;color:rgba(255,255,255,.4);cursor:pointer;transition:.15s}
+.fsb:hover{border-color:rgba(255,255,255,.3);color:#fff}
+.foot-col h5{font-family:'Bricolage Grotesque',sans-serif;font-size:.82rem;font-weight:800;color:#fff;letter-spacing:.03em;margin-bottom:1.1rem}
+.foot-col li{margin-bottom:.55rem}
+.foot-col li a{font-size:.8rem;color:rgba(255,255,255,.4);transition:color .15s;cursor:pointer}
+.foot-col li a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.07);padding:1.4rem 2rem;max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.9rem}
+.foot-bottom p{font-size:.76rem;color:rgba(255,255,255,.3)}
+.modal-bg{display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.5);backdrop-filter:blur(10px);align-items:center;justify-content:center}
+.modal-bg.open{display:flex;animation:pgIn .2s ease}
+.modal{background:#fff;border-radius:var(--r6);padding:2.5rem;max-width:490px;width:calc(100% - 2.5rem);box-shadow:var(--s4);position:relative;max-height:90vh;overflow-y:auto}
+.modal-x{position:absolute;top:1.15rem;right:1.15rem;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:var(--ink3);cursor:pointer}
+.modal-x:hover{background:var(--bg2)}
+.modal-ic{font-size:2rem;margin-bottom:.65rem}
+.modal h3{font-family:'Bricolage Grotesque',sans-serif;font-size:1.35rem;font-weight:800;margin-bottom:.35rem}
+.modal > p{font-size:.855rem;color:var(--ink3);margin-bottom:1.4rem}
+.pay-g{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-bottom:1.1rem}
+.popt{border:1.5px solid var(--line);border-radius:var(--r4);padding:.85rem;text-align:center;cursor:pointer;transition:.15s}
+.popt:hover,.popt.on{border-color:var(--navy);background:var(--blue-l)}
+.popt .poi{font-size:1.35rem;margin-bottom:.25rem}
+.popt strong{display:block;font-size:.8rem;color:var(--ink2)}
+.popt span{font-size:.7rem;color:var(--ink3)}
+.toast{position:fixed;bottom:2rem;right:2rem;z-index:9999;background:var(--navy);color:#fff;padding:.72rem 1.4rem;border-radius:var(--r4);font-size:.875rem;font-weight:600;box-shadow:var(--s4);opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .22s,transform .22s;max-width:300px}
+.toast.show{opacity:1;pointer-events:all;transform:translateY(0)}
+@media(max-width:1100px){
+  .hero-inner{grid-template-columns:1fr;max-width:660px;gap:2.5rem}
+  .hero-card{display:none}
+  .hiw-grid{grid-template-columns:repeat(2,1fr)}
+  .outcomes-inner{grid-template-columns:1fr}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+  .founder-grid{grid-template-columns:1fr}
+  .vals-grid{grid-template-columns:repeat(2,1fr)}
+  .tgrid{grid-template-columns:repeat(2,1fr)}
+  .bgrid{grid-template-columns:repeat(2,1fr)}
+  .curriculum-grid{grid-template-columns:repeat(2,1fr)}
+  .price-cards{grid-template-columns:repeat(3,1fr)}
+  .prog-details{grid-template-columns:repeat(2,1fr);row-gap:1rem}
+  .pd-item{border-right:none;padding-left:0}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media(max-width:780px){
+  .nav-links,.btn-ghost{display:none}
+  .ham{display:flex}
+  #nav.open .nav-links{display:flex;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:.85rem 1.5rem;gap:.2rem}
+  .founder-grid,.contact-grid{grid-template-columns:1fr}
+  .vals-grid,.tgrid,.bgrid{grid-template-columns:1fr}
+  .curriculum-grid{grid-template-columns:1fr}
+  .cur-col{border-right:none;border-bottom:1px solid var(--line)}
+  .cur-col:last-child{border-bottom:none}
+  .price-cards,.prog-details{grid-template-columns:1fr}
+  .stats-row{flex-direction:column;gap:1.25rem}
+  .stat{border-right:none;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:1.25rem;width:100%;justify-content:center}
+  .stat:last-child{border-bottom:none}
+  .pc-hero{flex-direction:column}
+  .foot-grid{grid-template-columns:1fr}
+  .foot-bottom{flex-direction:column;text-align:center}
+  .cf-2col{grid-template-columns:1fr}
+  .hiw-card:not(:last-child)::after{display:none}
+}
+@media(max-width:480px){
+  .hero-acts{flex-direction:column}
+  .btn-xl{width:100%;justify-content:center}
+  .hiw-grid{grid-template-columns:1fr}
+  .fc-stats-row{grid-template-columns:1fr 1fr}
+  .pay-g{grid-template-columns:1fr}
+  .modal{padding:1.75rem}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-w">
+    <div class="logo-wrap" onclick="go('home')">
+      <svg class="logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="18" cy="18" r="16" stroke="#1a2d5a" stroke-width="2.5" fill="none"/>
+        <path d="M12 10 L12 26 Q12 26 20 26 Q26 26 26 18 Q26 10 20 10 Z" fill="#1a2d5a"/>
+        <rect x="14.5" y="13" width="2.5" height="10" rx="1.2" fill="white"/>
+        <rect x="14.5" y="13" width="8" height="2.5" rx="1.2" fill="white"/>
+      </svg>
+      <div>
+        <span class="lt-top">DACOM</span>
+        <span class="lt-sub">Digitals Ltd</span>
+      </div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a onclick="go('home')" id="nl-home" class="on">Home</a></li>
+      <li><a onclick="go('about')" id="nl-about">About</a></li>
+      <li><a onclick="go('courses')" id="nl-courses">Programme</a></li>
+      <li><a onclick="go('testimonials')" id="nl-testimonials">Reviews</a></li>
+      <li><a onclick="go('blog')" id="nl-blog">Blog</a></li>
+      <li><a onclick="go('contact')" id="nl-contact">Contact</a></li>
+    </ul>
+    <div class="nav-r">
+      <button class="btn-enroll" onclick="openModal()">Enroll Now</button>
+    </div>
+    <div class="ham" id="ham" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section id="home" class="on">
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-dots"></div>
+    <div class="hero-inner">
+      <div>
+        <div class="urgency-bar"><span class="u-dot"></span> Next Cohort Starts 18th April, 2026 &mdash; Weekends Only</div>
+        <h1 class="hero-h1">Become a <span class="accent">Certified</span><br>Data Analyst<br>in <span class="underlined">9 Weeks</span></h1>
+        <p class="hero-p">Master Data Analytics with Excel, SQL, Power BI and AI. Live online training led by a certified practitioner. Enroll from anywhere in Africa and beyond.</p>
+        <div class="hero-acts">
+          <button class="btn-n btn-xl" onclick="openModal()">Start Your Data Career</button>
+          <button class="btn-s btn-xl" onclick="document.querySelector('.lead-sec').scrollIntoView({behavior:'smooth'})">Free Info Session</button>
+        </div>
+        <div class="sproof">
+          <div class="av-stack">
+            <div class="av" style="background:#1e5fd4">OA</div>
+            <div class="av" style="background:#0ba865">CM</div>
+            <div class="av" style="background:#e07b00">TN</div>
+            <div class="av" style="background:#e53e52">AF</div>
+            <div class="av" style="background:#00b4d8">BK</div>
+          </div>
+          <div>
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="proof-txt"><strong>300+ students</strong> trained across 10+ countries</div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative">
+        <div class="fchip fc1">Module completed!</div>
+        <div class="fchip fc2">Dashboard live &middot; 96% score</div>
+        <div class="hero-card">
+          <div class="hc-top">
+            <div class="hc-logo">
+              <svg class="hc-logo-mark" viewBox="0 0 28 28" fill="none">
+                <circle cx="14" cy="14" r="12" stroke="rgba(255,255,255,.4)" stroke-width="1.5" fill="none"/>
+                <path d="M9 8 L9 20 Q9 20 15.5 20 Q20 20 20 14 Q20 8 15.5 8 Z" fill="rgba(255,255,255,.9)"/>
+                <rect x="11" y="10.5" width="2" height="7" rx=".9" fill="#1a2d5a"/>
+                <rect x="11" y="10.5" width="5.5" height="2" rx=".9" fill="#1a2d5a"/>
+              </svg>
+              <div class="hc-logo-name">DACOM Digitals<span>Certified Training</span></div>
+            </div>
+            <div class="hc-title">Data Analysis + AI Mastery</div>
+            <div class="hc-sub">9 Weeks &middot; 100% Online &middot; Weekends Only</div>
+            <div class="hc-dates">
+              <div class="hc-date-chip">Starts 18 April 2026</div>
+              <div class="hc-date-chip">10+ Countries</div>
+              <div class="hc-date-chip">Certificate Included</div>
+            </div>
+          </div>
+          <div class="hc-body">
+            <div style="background:linear-gradient(90deg,#fff8e6,#fef0f2);border:1px solid var(--gold);border-radius:var(--r2);padding:.35rem .75rem;font-size:.7rem;font-weight:700;color:#8a5a00;margin-bottom:.75rem;text-align:center">🐣 50% Easter Discount — All prices below are discounted</div>
+            <div class="hc-price-row">
+              <div class="hc-price-item"><span class="currency">Nigeria</span><span class="amount">60K NGN</span></div>
+              <div style="width:1px;height:35px;background:var(--line)"></div>
+              <div class="hc-price-item"><span class="currency">Cameroon</span><span class="amount">30K CFA</span></div>
+              <div style="width:1px;height:35px;background:var(--line)"></div>
+              <div class="hc-price-item"><span class="currency">Ghana</span><span class="amount">600 GHC</span></div>
+              <div style="width:1px;height:35px;background:var(--line)"></div>
+              <div class="hc-price-item"><span class="currency">Zambia</span><span class="amount">1,500 ZMW</span></div>
+            </div>
+            <div class="hc-div"></div>
+            <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink4);margin-bottom:.6rem">You will Master</div>
+            <div class="module-pills">
+              <div class="mp">Excel Analytics</div>
+              <div class="mp">SQL Databases</div>
+              <div class="mp">Power BI</div>
+              <div class="mp">AI in Analytics</div>
+              <div class="mp">Industry Projects</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stats-row">
+      <div class="stat"><span class="stat-icon">&#127891;</span><div><div class="stat-num">300+</div><div class="stat-lbl">Students Trained</div></div></div>
+      <div class="stat"><span class="stat-icon">&#127757;</span><div><div class="stat-num">10+</div><div class="stat-lbl">Countries Reached</div></div></div>
+      <div class="stat"><span class="stat-icon">&#9200;</span><div><div class="stat-num">9 Wks</div><div class="stat-lbl">To Certification</div></div></div>
+      <div class="stat"><span class="stat-icon">&#11088;</span><div><div class="stat-num">4.9/5</div><div class="stat-lbl">Student Rating</div></div></div>
+      <div class="stat"><span class="stat-icon">&#128197;</span><div><div class="stat-num">18 Apr</div><div class="stat-lbl">Next Start Date</div></div></div>
+    </div>
+  </div>
+
+  <div class="countries-sec">
+    <div class="countries-row">
+      <span class="c-label">Students from</span>
+      <div class="flags">
+        <div class="flag-item">Nigeria</div>
+        <div class="flag-item">Cameroon</div>
+        <div class="flag-item">Ghana</div>
+        <div class="flag-item">Kenya</div>
+        <div class="flag-item">South Africa</div>
+        <div class="flag-item">United Kingdom</div>
+        <div class="flag-item">United States</div>
+        <div class="flag-item">Zambia</div>
+        <div class="flag-item">Canada + more</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hiw-sec">
+    <div class="w">
+      <div class="hiw-header">
+        <span class="tag">The Process</span>
+        <h2 class="h2">From Registration to Certification in 4 Steps</h2>
+        <p class="sub">A clear, structured journey proven with 300+ graduates across Africa and beyond.</p>
+      </div>
+      <div class="hiw-grid">
+        <div class="hiw-card"><span class="hiw-num">Step 01</span><div class="hiw-icon">&#128221;</div><h4>Register and Pay</h4><p>Choose your currency and complete enrollment. Receive instant confirmation and access to your student resources.</p></div>
+        <div class="hiw-card"><span class="hiw-num">Step 02</span><div class="hiw-icon" style="background:var(--green-l)">&#128218;</div><h4>Attend Live Sessions</h4><p>Join weekend-only Google Meet classes led by Daniel Oluwasusi. Ask questions live and learn with peers from 10+ countries.</p></div>
+        <div class="hiw-card"><span class="hiw-num">Step 03</span><div class="hiw-icon" style="background:var(--gold-l)">&#128736;</div><h4>Build Real Projects</h4><p>Apply every skill to industry-relevant datasets. Build a portfolio that proves your capability to any employer.</p></div>
+        <div class="hiw-card"><span class="hiw-num">Step 04</span><div class="hiw-icon" style="background:var(--rose-l)">&#127942;</div><h4>Get Certified</h4><p>Graduate with a Dacom Digitals certificate, a polished portfolio, and career guidance from your instructor.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outcomes-sec">
+    <div class="w">
+      <div class="outcomes-inner">
+        <div class="oi-left">
+          <span class="tag">Why It Works</span>
+          <h2 class="h2">Real Transformations. Measurable Outcomes.</h2>
+          <p class="sub">Our graduates do not just earn certificates. They land jobs, earn promotions, and build careers in data analytics.</p>
+          <div class="outcome-list">
+            <div class="outcome-item"><span class="oi-check">&#10003;</span> Land data analyst roles at banks, fintechs, and tech companies</div>
+            <div class="outcome-item"><span class="oi-check">&#10003;</span> Switch from non-technical careers in as little as 9 weeks</div>
+            <div class="outcome-item"><span class="oi-check">&#10003;</span> Build automation tools that save companies hours every week</div>
+            <div class="outcome-item"><span class="oi-check">&#10003;</span> Earn verified certification recognized by employers globally</div>
+            <div class="outcome-item"><span class="oi-check">&#10003;</span> Join a community of analysts in 10+ countries</div>
+          </div>
+        </div>
+        <div>
+          <div class="stat-grid">
+            <div class="sg-card"><div class="sg-num">300+</div><div class="sg-lbl">Graduates trained</div></div>
+            <div class="sg-card"><div class="sg-num">10+</div><div class="sg-lbl">Countries reached</div></div>
+            <div class="sg-card"><div class="sg-num">9 Wks</div><div class="sg-lbl">Time to certification</div></div>
+            <div class="sg-card"><div class="sg-num">4.9&#9733;</div><div class="sg-lbl">Student satisfaction</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lead-sec">
+    <div class="lead-inner">
+      <span class="tag">Free Info Session</span>
+      <h2 class="h2">Start Your Data Career For Free</h2>
+      <p class="sub">Join our free online info session: How to Become a Certified Data Analyst in 9 Weeks. Live Q&A with Daniel Oluwasusi.</p>
+      <div class="cd-box">
+        <div class="cd-lbl"><span class="cdot"></span> Enrollment closes in</div>
+        <div class="timer">
+          <div class="tu"><span class="tn" id="timer-days">28</span><div class="tl">Days</div></div>
+          <div class="tsep">:</div>
+          <div class="tu"><span class="tn" id="timer-hrs">12</span><div class="tl">Hours</div></div>
+          <div class="tsep">:</div>
+          <div class="tu"><span class="tn" id="timer-mins">44</span><div class="tl">Mins</div></div>
+          <div class="tsep">:</div>
+          <div class="tu"><span class="tn" id="timer-secs">00</span><div class="tl">Secs</div></div>
+        </div>
+      </div>
+      <div class="lead-form">
+        <input type="email" id="leadEmail" placeholder="Enter your email address">
+        <button onclick="claimFree()">Reserve My Spot</button>
+      </div>
+      <div class="lead-perks">
+        <span class="lp">&#10003; 100% Free session</span>
+        <span class="lp">&#10003; Live on Google Meet</span>
+        <span class="lp">&#10003; No commitment needed</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="pg-hero">
+    <div class="w"><div class="pg-hero-c">
+      <span class="tag">About Dacom Digitals</span>
+      <h1 class="h2">Trusted by 300+ Students Across 10+ Countries</h1>
+      <p class="sub" style="margin:0 auto">We are a results-driven data analytics training institute built for ambitious Africans and global learners who want real, career-changing skills.</p>
+    </div></div>
+  </div>
+  <div class="founder-sec">
+    <div class="w">
+      <div class="founder-grid">
+        <div class="founder-card">
+          <div class="fc-header">
+            <div class="fc-avatar">
+  <img src="daniel.jpg" alt="Daniel Oluwasusi" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+</div>
+            <div class="fc-name">Daniel Oluwasusi</div>
+            <div class="fc-title">Certified Data Analyst &middot; Founder &amp; Lead Instructor</div>
+            <div class="fc-badges">
+              <span class="chip c-white">&#10003; Certified Analyst</span>
+              <span class="chip c-white">Lead Instructor</span>
+              <span class="chip c-white">Global Trainer</span>
+            </div>
+          </div>
+          <div class="fc-body">
+            <div class="fc-stats-row">
+              <div class="fcs"><div class="fcs-n">300+</div><div class="fcs-l">Students Trained</div></div>
+              <div class="fcs"><div class="fcs-n">10+</div><div class="fcs-l">Countries</div></div>
+              <div class="fcs"><div class="fcs-n">9 Wks</div><div class="fcs-l">Programme</div></div>
+            </div>
+            <div style="font-size:.8rem;color:rgba(255,255,255,.5);line-height:1.6;padding:.85rem;background:rgba(255,255,255,.06);border-radius:var(--r3);border:1px solid rgba(255,255,255,.1)">
+              <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:rgba(255,255,255,.4);margin-bottom:.4rem">Contact</div>
+              <a href="/cdn-cgi/l/email-protection#5930373f36193d383a36343d303e302d38352a773a3634"><span class="__cf_email__" data-cfemail="5f363139301f3b3e3c30323b3638362b3e332c713c3032">[email&#160;protected]</span></a><br>+234 911 357 8740
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="tag">Meet Your Instructor</span>
+          <h2 class="h2">The Analyst Who Teaches What Actually Works</h2>
+          <p class="founder-bio">Daniel Oluwasusi is a Certified Data Analyst and the founder of Dacom Digitals Ltd. With hands-on industry experience and a proven track record training 300+ students across 10+ countries, Daniel built this programme to bridge the gap between academic knowledge and what employers actually need.</p>
+          <p class="founder-bio">His teaching style is practical, direct, and results-focused. Every lesson is built around real data, real tools, and the skills that data teams actually use. Daniel personally mentors each cohort through to certification.</p>
+          <div class="cred-list">
+            <div class="cred-item"><span class="cred-icon">&#127942;</span><div class="cred-text"><strong>Certified Data Analyst</strong> &mdash; Professionally certified with real-world industry experience in data analytics and business intelligence.</div></div>
+            <div class="cred-item"><span class="cred-icon">&#127757;</span><div class="cred-text"><strong>Global Training Reach</strong> &mdash; Students trained in Nigeria, Ghana, Cameroon, Kenya, South Africa, the UK, USA, Canada, and more.</div></div>
+            <div class="cred-item"><span class="cred-icon">&#128202;</span><div class="cred-text"><strong>Industry-Focused Curriculum</strong> &mdash; Programme built around tools employers demand: Excel, SQL, Power BI, and AI analytics.</div></div>
+            <div class="cred-item"><span class="cred-icon">&#129309;</span><div class="cred-text"><strong>Personal Mentorship</strong> &mdash; Daniel leads every live session on Google Meet, providing direct, personalized guidance throughout.</div></div>
+          </div>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+            <button class="btn-n" onclick="openModal()">Train With Daniel</button>
+            <button class="btn-s" onclick="openWA()">Chat on WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vals-sec">
+    <div class="w">
+      <div style="text-align:center;margin-bottom:2.75rem"><span class="tag">Our Values</span><h2 class="h2">What Makes Dacom Digitals Different</h2></div>
+      <div class="vals-grid">
+        <div class="val-card"><div class="val-ic">&#127919;</div><h4>Practical-First</h4><p>Every lesson uses real industry datasets. You practice the same workflows analysts use in top companies every day.</p></div>
+        <div class="val-card"><div class="val-ic">&#127757;</div><h4>Globally Accessible</h4><p>Training students across 10+ countries. Multi-currency pricing makes quality data education accessible everywhere.</p></div>
+        <div class="val-card"><div class="val-ic">&#128197;</div><h4>Flexible for Workers</h4><p>All classes are on weekends via Google Meet. You do not have to quit your job to become a certified data analyst.</p></div>
+        <div class="val-card"><div class="val-ic">&#128104;</div><h4>Expert-Led</h4><p>Daniel personally teaches and mentors every cohort. You get direct access to an experienced certified analyst.</p></div>
+        <div class="val-card"><div class="val-ic">&#127981;</div><h4>Project-Based Learning</h4><p>Industry-relevant projects are built into the programme. Graduate with a portfolio that gets you interviews.</p></div>
+        <div class="val-card"><div class="val-ic">&#127942;</div><h4>Verified Certification</h4><p>Complete the programme and earn a Dacom Digitals certificate that signals real, practical capability to employers.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="courses">
+  <div class="prog-hero">
+    <div class="prog-hero-c">
+      <span class="tag">The Programme</span>
+      <h1 class="h2">Data Analysis + AI Mastery in 9 Weeks</h1>
+      <p class="sub">One comprehensive programme. Four powerful tools. Real industry projects. One certificate.</p>
+    </div>
+  </div>
+  <div class="programme-sec">
+    <div class="w">
+      <div class="prog-card">
+        <div class="pc-hero">
+          <div class="pc-hero-l">
+            <span class="tag">Dacom Digitals Certified Programme</span>
+            <h2>Mastering Data Analysis + AI</h2>
+            <p>Structured, practical training that takes you from beginner to certified data analyst. Led live by Daniel Oluwasusi every weekend on Google Meet.</p>
+          </div>
+          <div class="pc-hero-r">
+            <div class="pc-dur">9</div>
+            <div class="pc-dur-lbl">Weeks to Certification</div>
+            <div class="pc-chips">
+              <span class="chip c-white">Weekends Only</span>
+              <span class="chip c-white">100% Online</span>
+              <span class="chip c-white">Certificate</span>
+            </div>
+          </div>
+        </div>
+        <div class="curriculum-grid">
+          <div class="cur-col">
+            <div class="cur-tool"><div class="cur-tool-icon" style="background:#e8f5e9">&#128202;</div><h4>Excel Analytics</h4></div>
+            <div class="cur-topics">
+              <div class="ct"><span class="ck">&#10003;</span>Data cleaning and preparation</div>
+              <div class="ct"><span class="ck">&#10003;</span>Advanced formulas and functions</div>
+              <div class="ct"><span class="ck">&#10003;</span>Pivot Tables and Power Query</div>
+              <div class="ct"><span class="ck">&#10003;</span>Data visualization and charts</div>
+              <div class="ct"><span class="ck">&#10003;</span>Dashboard building</div>
+              <div class="ct"><span class="ck">&#10003;</span>Business reporting</div>
+            </div>
+          </div>
+          <div class="cur-col">
+            <div class="cur-tool"><div class="cur-tool-icon" style="background:#e3f2fd">&#128452;</div><h4>SQL for Data</h4></div>
+            <div class="cur-topics">
+              <div class="ct"><span class="ck">&#10003;</span>Database fundamentals</div>
+              <div class="ct"><span class="ck">&#10003;</span>SELECT, WHERE, GROUP BY</div>
+              <div class="ct"><span class="ck">&#10003;</span>Joins and subqueries</div>
+              <div class="ct"><span class="ck">&#10003;</span>Window functions</div>
+              <div class="ct"><span class="ck">&#10003;</span>Data extraction and analysis</div>
+              <div class="ct"><span class="ck">&#10003;</span>Real business SQL projects</div>
+            </div>
+          </div>
+          <div class="cur-col">
+            <div class="cur-tool"><div class="cur-tool-icon" style="background:#fff8e1">&#128200;</div><h4>Power BI</h4></div>
+            <div class="cur-topics">
+              <div class="ct"><span class="ck">&#10003;</span>Connecting data sources</div>
+              <div class="ct"><span class="ck">&#10003;</span>Data modelling</div>
+              <div class="ct"><span class="ck">&#10003;</span>DAX formulas</div>
+              <div class="ct"><span class="ck">&#10003;</span>Interactive dashboards</div>
+              <div class="ct"><span class="ck">&#10003;</span>KPI and executive reports</div>
+              <div class="ct"><span class="ck">&#10003;</span>Publishing and sharing</div>
+            </div>
+          </div>
+          <div class="cur-col">
+            <div class="cur-tool"><div class="cur-tool-icon" style="background:#f3e5f5">&#129302;</div><h4>AI in Analytics <span class="chip c-gold" style="font-size:.58rem">BONUS</span></h4></div>
+            <div class="cur-topics">
+              <div class="ct"><span class="ck">&#10003;</span>AI tools for data analysts</div>
+              <div class="ct"><span class="ck">&#10003;</span>ChatGPT for data tasks</div>
+              <div class="ct"><span class="ck">&#10003;</span>Automating repetitive work</div>
+              <div class="ct"><span class="ck">&#10003;</span>AI-powered dashboards</div>
+              <div class="ct"><span class="ck">&#10003;</span>Prompt engineering for data</div>
+              <div class="ct"><span class="ck">&#10003;</span>Future-proofing your career</div>
+            </div>
+          </div>
+        </div>
+        <div class="prog-details">
+          <div class="pd-item"><span class="pd-icon">&#9200;</span><div><div class="pd-label">Duration</div><div class="pd-val">9 Weeks</div><div class="pd-sub">Weekends only</div></div></div>
+          <div class="pd-item"><span class="pd-icon">&#128187;</span><div><div class="pd-label">Format</div><div class="pd-val">100% Online</div><div class="pd-sub">Google Meet live sessions</div></div></div>
+          <div class="pd-item"><span class="pd-icon">&#127981;</span><div><div class="pd-label">Projects</div><div class="pd-val">Industry Real</div><div class="pd-sub">Portfolio included</div></div></div>
+          <div class="pd-item"><span class="pd-icon">&#128197;</span><div><div class="pd-label">Start Date</div><div class="pd-val">18th April 2026</div><div class="pd-sub">Limited cohort slots</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pricing-sec">
+    <div class="w">
+      <div class="pricing-inner">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:.25rem">
+          <div>
+            <div class="pricing-title">Simple, Transparent Pricing</div>
+            <div class="pricing-sub">One price. All 4 tools. Full programme. Certificate included. Pay in your local currency.</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#e53e52,#f4a11a);color:#fff;border-radius:var(--r3);padding:.6rem 1.1rem;text-align:center;flex-shrink:0;box-shadow:0 4px 14px rgba(229,62,82,.3)">
+            <div style="font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.85">🐣 Easter Special</div>
+            <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:1.5rem;font-weight:800;line-height:1">50% OFF</div>
+            <div style="font-size:.65rem;opacity:.85;margin-top:.15rem">All prices below are discounted</div>
+          </div>
+        </div>
+        <div style="background:var(--gold-l);border:1px solid var(--gold);border-radius:var(--r2);padding:.55rem 1rem;font-size:.8rem;color:#8a5a00;font-weight:600;margin-bottom:1.5rem;display:flex;align-items:center;gap:.5rem">
+          <span>🎉</span> These are our <strong>50% Easter discount prices</strong> — limited time offer. Ends 18th April 2026.
+        </div>
+        <div class="price-cards" style="grid-template-columns:repeat(4,1fr)">
+          <div class="price-card">
+            <div class="price-flag">&#127475;&#127468;</div>
+            <div class="price-country">Nigeria</div>
+            <div class="price-amount">60,000 NGN</div>
+            <div class="price-currency">Nigerian Naira · <span style="color:var(--rose);font-weight:700">50% OFF</span></div>
+            <button class="enroll-btn" onclick="openModal('Nigeria - 60,000 Naira','NGN','6000000')">Enroll Now</button>
+          </div>
+          <div class="price-card featured">
+            <div class="price-flag">&#127464;&#127474;</div>
+            <div class="price-country">Cameroon</div>
+            <div class="price-amount">30,000 CFA</div>
+            <div class="price-currency">CFA Franc · <span style="color:rgba(255,200,100,.9);font-weight:700">50% OFF</span></div>
+            <button class="enroll-btn" onclick="openModal('Cameroon - 30,000 CFA','XAF','3000000')">Enroll Now</button>
+          </div>
+          <div class="price-card">
+            <div class="price-flag">&#127468;&#127469;</div>
+            <div class="price-country">Ghana</div>
+            <div class="price-amount">600 GHC</div>
+            <div class="price-currency">Ghanaian Cedi · <span style="color:var(--rose);font-weight:700">50% OFF</span></div>
+            <button class="enroll-btn" onclick="openModal('Ghana - 600 GHC','GHS','60000')">Enroll Now</button>
+          </div>
+          <div class="price-card">
+            <div class="price-flag">&#127487;&#127474;</div>
+            <div class="price-country">Zambia</div>
+            <div class="price-amount">1,500 ZMW</div>
+            <div class="price-currency">Zambian Kwacha · <span style="color:var(--rose);font-weight:700">50% OFF</span></div>
+            <button class="enroll-btn" onclick="openModal('Zambia - 1,500 ZMW','ZMW','150000')">Enroll Now</button>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:1.25rem;font-size:.8rem;color:var(--ink3)">
+          Enrolling from another country?
+          <a onclick="go('contact')" style="color:var(--blue);font-weight:700;cursor:pointer">Contact us for your local pricing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="testi-hero">
+    <div class="w"><div class="testi-hero-c">
+      <span class="tag">Student Results</span>
+      <h1 class="h2">What Our Graduates Say</h1>
+      <p class="sub">300+ students from 10+ countries have transformed their careers with Dacom Digitals.</p>
+      <div class="rating-show">
+        <div class="rb-big"><div class="rn">4.9</div><div class="rs">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="rc">300+ reviews</div></div>
+        <div class="rbar-col">
+          <div class="rbar-row"><span class="rbar-s">&#9733;&#9733;&#9733;&#9733;&#9733;</span><div class="rbar-t"><div class="rbar-f" style="width:87%"></div></div><span>87%</span></div>
+          <div class="rbar-row"><span class="rbar-s">&#9733;&#9733;&#9733;&#9733;</span><div class="rbar-t"><div class="rbar-f" style="width:11%"></div></div><span>11%</span></div>
+          <div class="rbar-row"><span class="rbar-s">&#9733;&#9733;&#9733;</span><div class="rbar-t"><div class="rbar-f" style="width:2%"></div></div><span>2%</span></div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+  <div class="ft-testi">
+    <div class="w"><div class="ft-card">
+      <p class="ft-q">I had no background in data at all. Daniel's teaching style made everything click. In 9 weeks I had a certificate and a portfolio. Two months later I landed my first data analyst role.</p>
+      <div class="ft-auth">
+        <div class="ft-av">OA</div>
+        <div style="text-align:left"><div class="ft-nm">Oluwakemi Adeyemi</div><div class="ft-rl">Data Analyst, Lagos Nigeria</div><div style="color:#f59e0b;font-size:.8rem;margin-top:.2rem">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+      </div>
+    </div></div>
+  </div>
+  <div class="tgrid-sec">
+    <div class="w">
+      <div class="tgrid">
+        <div class="tcard hover-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"The Power BI module was worth everything. Daniel explains DAX so clearly. I now build dashboards for my company's management team every month."</p><div class="t-auth"><div class="t-av" style="background:linear-gradient(135deg,#1e5fd4,#00b4d8)">CM</div><div><div class="t-nm">Chidinma Madu</div><div class="t-rl">Business Analyst, Abuja</div><div class="t-pill">Using Power BI daily</div></div></div></div>
+        <div class="tcard hover-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"Enrolling from Cameroon, the classes are live, interactive, and Daniel is always available for questions. Best investment I have ever made."</p><div class="t-auth"><div class="t-av" style="background:linear-gradient(135deg,#0ba865,#00b4d8)">TN</div><div><div class="t-nm">Tabi Ngozi</div><div class="t-rl">Data Analyst, Douala, Cameroon</div><div class="t-pill">First data role secured</div></div></div></div>
+        <div class="tcard hover-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"The AI bonus module was a revelation. I now use AI tools to automate my reporting workflow. Daniel's programme is genuinely ahead of most courses."</p><div class="t-auth"><div class="t-av" style="background:linear-gradient(135deg,#e07b00,#f59e0b)">AF</div><div><div class="t-nm">Amara Fosu</div><div class="t-rl">Junior Analyst, Accra, Ghana</div><div class="t-pill">Reports automated with AI</div></div></div></div>
+        <div class="tcard hover-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"I work Monday to Friday so weekend-only classes were perfect. The SQL module helped me get my current role in a fintech company."</p><div class="t-auth"><div class="t-av" style="background:linear-gradient(135deg,#e53e52,#e07b00)">BK</div><div><div class="t-nm">Babatunde Kolawole</div><div class="t-rl">Data Analyst, Lagos Fintech</div><div class="t-pill">Landed fintech role</div></div></div></div>
+        <div class="tcard hover-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"I enrolled from the UK. The community, the live sessions, and Daniel's mentorship made this feel genuinely personal. Not like a typical online course."</p><div class="t-auth"><div class="t-av" style="background:linear-gradient(135deg,#1a2d5a,#1e5fd4)">EO</div><div><div class="t-nm">Emeka Okonkwo</div><div class="t-rl">Data Analyst, London UK</div><div class="t-pill">Enrolled from the UK</div></div></div></div>
+        <div class="tcard hover-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"The Excel sessions transformed how I work. I went from not understanding pivot tables to building full management dashboards."</p><div class="t-auth"><div class="t-av" style="background:linear-gradient(135deg,#7048e8,#1e5fd4)">KA</div><div><div class="t-nm">Kemi Afolabi</div><div class="t-rl">Analyst, Ibadan Nigeria</div><div class="t-pill">Promoted 6 months later</div></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="blog">
+  <div class="blog-hero">
+    <div class="blog-hr">
+      <div><span class="tag">Free Resources</span><h1 class="h2">Learn Something Today</h1><p class="sub">Free articles, tips, and career guides. No login required.</p></div>
+      <button class="btn-s" onclick="showToast('Newsletter coming soon!')">Subscribe to Newsletter</button>
+    </div>
+  </div>
+  <div class="bgrid-sec">
+    <div class="w">
+      <div class="bgrid">
+        <div class="bcard hover-card" onclick="showToast('Full article coming soon!')"><div class="bc-thumb" style="background:linear-gradient(135deg,#e8f0fd,#b3ccf8)">&#128202;</div><div class="bc-body"><div class="bc-cat">Excel Tips</div><h4 class="bc-title">10 Excel Formulas Every Data Analyst Must Know in 2025</h4><p class="bc-ex">Master these and cut your data processing time by 70%.</p><div class="bc-meta"><span>March 2025</span><span>6 min read</span></div></div></div>
+        <div class="bcard hover-card" onclick="showToast('Full article coming soon!')"><div class="bc-thumb" style="background:linear-gradient(135deg,#e5f9f0,#a7f3d0)">&#128452;</div><div class="bc-body"><div class="bc-cat">SQL</div><h4 class="bc-title">SQL Window Functions Explained Simply With Real Examples</h4><p class="bc-ex">The skill that separates junior from senior analysts.</p><div class="bc-meta"><span>Feb 2025</span><span>9 min read</span></div></div></div>
+        <div class="bcard hover-card" onclick="showToast('Full article coming soon!')"><div class="bc-thumb" style="background:linear-gradient(135deg,#f3efff,#ddd6fe)">&#129302;</div><div class="bc-body"><div class="bc-cat">AI and Careers</div><h4 class="bc-title">How AI Is Changing the Data Analyst Role in Africa</h4><p class="bc-ex">The analysts who understand AI will have an enormous advantage.</p><div class="bc-meta"><span>Jan 2025</span><span>7 min read</span></div></div></div>
+        <div class="bcard hover-card" onclick="showToast('Full article coming soon!')"><div class="bc-thumb" style="background:linear-gradient(135deg,#fff8e6,#fde68a)">&#128200;</div><div class="bc-body"><div class="bc-cat">Power BI</div><h4 class="bc-title">Build Your First Power BI Dashboard in Under 2 Hours</h4><p class="bc-ex">Step-by-step from raw CSV to a polished, shareable dashboard.</p><div class="bc-meta"><span>Dec 2024</span><span>12 min read</span></div></div></div>
+        <div class="bcard hover-card" onclick="showToast('Full article coming soon!')"><div class="bc-thumb" style="background:linear-gradient(135deg,#fef0f2,#fecdd3)">&#128188;</div><div class="bc-body"><div class="bc-cat">Career Advice</div><h4 class="bc-title">How to Write a Data Analyst CV That Gets Interviews in Nigeria</h4><p class="bc-ex">The exact template our graduates use to land top roles.</p><div class="bc-meta"><span>Nov 2024</span><span>8 min read</span></div></div></div>
+        <div class="bcard hover-card" onclick="showToast('Full article coming soon!')"><div class="bc-thumb" style="background:linear-gradient(135deg,#e0f7fa,#a5f3fc)">&#127757;</div><div class="bc-body"><div class="bc-cat">Remote Work</div><h4 class="bc-title">Top 15 Remote Data Jobs Open to African Analysts Right Now</h4><p class="bc-ex">Remote-first companies actively hiring from Nigeria, Ghana and Cameroon.</p><div class="bc-meta"><span>Oct 2024</span><span>5 min read</span></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-hero">
+    <div class="w">
+      <span class="tag">Get In Touch</span>
+      <h1 class="h2">We Are Ready to Help You Enroll</h1>
+      <p class="sub">Questions about the programme, pricing, or schedule? Reach out and we will respond fast.</p>
+    </div>
+  </div>
+  <div class="contact-body">
+    <div class="w">
+      <div class="contact-grid">
+        <div>
+          <h3 class="ci-h3">Contact Dacom Digitals</h3>
+          <p class="ci-sub">We respond within a few hours on business days. You can also reach us instantly on WhatsApp.</p>
+          <div class="ci-item"><div class="ci-ic">&#128231;</div><div><div class="ci-lb">Email</div><div class="ci-val"><a href="/cdn-cgi/l/email-protection#01686f676e416560626e6c6568666875606d722f626e6c"><span class="__cf_email__" data-cfemail="9af3f4fcf5dafefbf9f5f7fef3fdf3eefbf6e9b4f9f5f7">[email&#160;protected]</span></a></div></div></div>
+          <div class="ci-item"><div class="ci-ic">&#128222;</div><div><div class="ci-lb">Phone / WhatsApp</div><div class="ci-val">+234 911 357 8740</div></div></div>
+          <div class="ci-item"><div class="ci-ic">&#128187;</div><div><div class="ci-lb">Classes Held On</div><div class="ci-val">Google Meet (link sent on enrollment)</div></div></div>
+          <div class="ci-item"><div class="ci-ic">&#128197;</div><div><div class="ci-lb">Class Schedule</div><div class="ci-val">Weekends Only &middot; 9 Weeks</div></div></div>
+          <div class="ci-item"><div class="ci-ic">&#127757;</div><div><div class="ci-lb">Who Can Enroll</div><div class="ci-val">Anyone globally, all countries welcome</div></div></div>
+          <button class="wa-btn" onclick="openWA()">Chat on WhatsApp</button>
+          <div style="margin-top:1.85rem">
+            <div style="font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink4);margin-bottom:.65rem">Follow Us</div>
+            <div class="soc-row">
+              <div class="sb" onclick="showToast('Facebook: @Dacom Digitals')">f</div>
+              <div class="sb" onclick="showToast('Instagram: @Dacom Digitals')">&#128247;</div>
+              <div class="sb" onclick="openWA()">&#128172;</div>
+            </div>
+          </div>
+        </div>
+        <div class="cf-wrap">
+          <div id="cfwrap">
+            <h3 class="cf-title">Send a Message</h3>
+            <p class="cf-sub">Fill in the form and we will get back to you quickly.</p>
+            <div class="cf-2col">
+              <div class="fg"><label>First Name</label><input id="cfn" placeholder="John"></div>
+              <div class="fg"><label>Last Name</label><input id="cln" placeholder="Doe"></div>
+            </div>
+            <div class="fg"><label>Email</label><input type="email" id="cem" placeholder="you@example.com"></div>
+            <div class="fg"><label>Your Country</label>
+              <select id="ccountry">
+                <option value="">Select your country</option>
+                <option>Nigeria</option><option>Cameroon</option><option>Ghana</option>
+                <option>Kenya</option><option>South Africa</option><option>Zambia</option><option>United Kingdom</option>
+                <option>United States</option><option>Canada</option><option>Other</option>
+              </select>
+            </div>
+            <div class="fg"><label>Message</label><textarea id="cmg" placeholder="I would like to know more about..."></textarea></div>
+            <button class="cf-submit" onclick="submitCF()">Send Message</button>
+          </div>
+          <div id="form-ok">
+            <div class="fok-ic">&#10003;</div>
+            <h4>Message Received!</h4>
+            <p>Thank you for reaching out. Daniel or the team will reply to you shortly.</p>
+            <button class="btn-s" style="margin-top:1.4rem" onclick="resetCF()">Send Another Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div style="max-width:1280px;margin:0 auto">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand" onclick="go('home')">
+          <svg width="30" height="30" viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="16" stroke="rgba(255,255,255,.3)" stroke-width="2" fill="none"/>
+            <path d="M12 10 L12 26 Q12 26 20 26 Q26 26 26 18 Q26 10 20 10 Z" fill="rgba(255,255,255,.85)"/>
+            <rect x="14.5" y="13" width="2.5" height="10" rx="1.2" fill="#1a2d5a"/>
+            <rect x="14.5" y="13" width="8" height="2.5" rx="1.2" fill="#1a2d5a"/>
+          </svg>
+          <div>
+            <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1rem;color:#fff;letter-spacing:-.02em">DACOM</div>
+            <div style="font-size:.58rem;color:rgba(255,255,255,.4);letter-spacing:.06em;text-transform:uppercase">Digitals Ltd</div>
+          </div>
+        </div>
+        <p class="foot-tagline">Certified data analytics training for ambitious professionals across Africa and the world. 300+ students. 10+ countries. Real results.</p>
+        <div class="fsoc">
+          <div class="fsb" onclick="showToast('Facebook: @Dacom Digitals')">f</div>
+          <div class="fsb" onclick="showToast('Instagram: @Dacom Digitals')">&#128247;</div>
+          <div class="fsb" onclick="openWA()">&#128172;</div>
+        </div>
+      </div>
+      <div class="foot-col"><h5>Programme</h5><ul>
+        <li><a onclick="go('courses')">Data Analysis + AI (9 Weeks)</a></li>
+        <li><a onclick="go('courses')">Excel Analytics Module</a></li>
+        <li><a onclick="go('courses')">SQL for Data</a></li>
+        <li><a onclick="go('courses')">Power BI Dashboards</a></li>
+        <li><a onclick="go('courses')">AI in Analytics (Bonus)</a></li>
+      </ul></div>
+      <div class="foot-col"><h5>Company</h5><ul>
+        <li><a onclick="go('about')">About Us</a></li>
+        <li><a onclick="go('about')">Meet Daniel</a></li>
+        <li><a onclick="go('testimonials')">Student Reviews</a></li>
+        <li><a onclick="go('blog')">Free Resources</a></li>
+        <li><a onclick="go('contact')">Contact</a></li>
+      </ul></div>
+      <div class="foot-col"><h5>Enroll</h5><ul>
+        <li><a onclick="openModal('Nigeria - 60,000 Naira','NGN','6000000')">Nigeria - 60,000 Naira</a></li>
+        <li><a onclick="openModal('Cameroon - 30,000 CFA','XAF','3000000')">Cameroon - 30,000 CFA</a></li>
+        <li><a onclick="openModal('Ghana - 600 GHC','GHS','60000')">Ghana - 600 GHC</a></li>
+        <li><a onclick="openModal('Zambia - 1,500 ZMW','ZMW','150000')">Zambia - 1,500 ZMW</a></li>
+        <li><a onclick="go('contact')">Other Countries</a></li>
+        <li><a onclick="openWA()">WhatsApp Us</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom">
+      <p>2025 Dacom Digitals Ltd. All rights reserved.</p>
+      <p><a href="/cdn-cgi/l/email-protection#f39a9d959cb39792909c9e979a949a87929f80dd909c9e"><span class="__cf_email__" data-cfemail="83eaede5ecc3e7e2e0eceee7eae4eaf7e2eff0ade0ecee">[email&#160;protected]</span></a> &middot; +234 911 357 8740</p>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-bg" id="modal">
+  <div class="modal">
+    <button class="modal-x" onclick="closeModal()">X</button>
+    <div class="modal-ic">&#127891;</div>
+    <h3>Enroll &mdash; <span id="mCN" style="color:var(--blue)">Dacom Digitals</span></h3>
+    <div style="background:var(--gold-l);border:1px solid var(--gold);border-radius:var(--r2);padding:.45rem .85rem;font-size:.78rem;color:#8a5a00;font-weight:600;margin-bottom:.75rem;text-align:center">🐣 50% Easter Discount Applied — Offer ends 18th April 2026</div>
+    <p>Secure your spot in our 9-week programme. Starts 18th April 2026.</p>
+    <div class="fg"><label>Full Name</label><input id="enrollName" placeholder="Your full name"></div>
+    <div class="fg"><label>Email Address</label><input type="email" id="enrollEmail" placeholder="you@example.com"></div>
+    <div style="font-size:.75rem;font-weight:700;color:var(--ink2);margin-bottom:.55rem">Payment Method</div>
+    <div class="pay-g">
+      <div class="popt" onclick="selPay(this,'paystack')"><div class="poi">💳</div><strong>Card / Bank</strong><span>Pay via Paystack</span></div>
+      <div class="popt" onclick="selPay(this,'transfer')"><div class="poi">&#127974;</div><strong>Bank Transfer</strong><span>Local bank</span></div>
+      <div class="popt" onclick="selPay(this,'whatsapp')"><div class="poi">&#128172;</div><strong>WhatsApp</strong><span>Pay via chat</span></div>
+      <div class="popt" onclick="selPay(this,'installment')"><div class="poi">&#128197;</div><strong>Installment</strong><span>Split payment</span></div>
+    </div>
+    <button class="btn-n" style="width:100%;justify-content:center;margin-top:.5rem" onclick="confirmEnroll()">Confirm My Enrollment</button>
+    <div style="margin-top:.75rem;font-size:.72rem;color:var(--ink3);text-align:center">Secure &middot; 300+ students enrolled before you</div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://js.paystack.co/v1/inline.js" async></script>
+<script>
+var pgs = ['home','about','courses','testimonials','blog','contact'];
+
+function go(id) {
+  for (var i = 0; i < pgs.length; i++) {
+    var s = document.getElementById(pgs[i]);
+    if (s) s.classList.remove('on');
+    var l = document.getElementById('nl-' + pgs[i]);
+    if (l) l.classList.remove('on');
+  }
+  var sec = document.getElementById(id);
+  if (sec) sec.classList.add('on');
+  var lnk = document.getElementById('nl-' + id);
+  if (lnk) lnk.classList.add('on');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+  document.getElementById('nav').classList.remove('open');
+}
+
+function toggleNav() {
+  document.getElementById('nav').classList.toggle('open');
+}
+
+window.addEventListener('scroll', function() {
+  var nav = document.getElementById('nav');
+  if (window.scrollY > 10) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var end = new Date('2026-04-18T00:00:00');
+  function tick() {
+    var d = end - Date.now();
+    if (d <= 0) {
+      document.getElementById('timer-days').textContent = '00';
+      document.getElementById('timer-hrs').textContent = '00';
+      document.getElementById('timer-mins').textContent = '00';
+      document.getElementById('timer-secs').textContent = '00';
+      return;
+    }
+    document.getElementById('timer-days').textContent = String(Math.floor(d / 86400000)).padStart(2,'0');
+    document.getElementById('timer-hrs').textContent = String(Math.floor((d % 86400000) / 3600000)).padStart(2,'0');
+    document.getElementById('timer-mins').textContent = String(Math.floor((d % 3600000) / 60000)).padStart(2,'0');
+    document.getElementById('timer-secs').textContent = String(Math.floor((d % 60000) / 1000)).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick, 1000);
+});
+
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function() { t.classList.remove('show'); }, 3000);
+}
+
+function claimFree() {
+  var el = document.getElementById('leadEmail');
+  var e = el ? el.value : '';
+  if (e && e.indexOf('@') === -1) {
+    showToast('Please enter a valid email');
+    return;
+  }
+  showToast('Spot reserved! Check your email for the session link.');
+  if (el) el.value = '';
+}
+
+async function submitCF() {
+  var f = document.getElementById('cfn').value.trim();
+  var l = document.getElementById('cln').value.trim();
+  var e = document.getElementById('cem').value.trim();
+  var m = document.getElementById('cmg').value.trim();
+  if (!f || !l || !e || !m) { showToast('Please fill in all required fields'); return; }
+  if (e.indexOf('@') === -1) { showToast('Please enter a valid email'); return; }
+  var btn = document.querySelector('.cf-submit');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  try {
+    var res = await fetch('https://formspree.io/f/xzdjwypd', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: f + ' ' + l, email: e, country: document.getElementById('ccountry').value, message: m })
+    });
+    if (res.ok) {
+      document.getElementById('cfwrap').style.display = 'none';
+      document.getElementById('form-ok').style.display = 'block';
+    } else {
+      showToast('Something went wrong. Please try WhatsApp instead.');
+    }
+  } catch(err) {
+    showToast('Network error. Please try WhatsApp instead.');
+  }
+  btn.textContent = 'Send Message →';
+  btn.disabled = false;
+}
+
+function resetCF() {
+  ['cfn','cln','cem','cmg'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+  document.getElementById('cfwrap').style.display = 'block';
+  document.getElementById('form-ok').style.display = 'none';
+}
+
+function openWA() {
+  var msg = encodeURIComponent("Hi Dacom Digitals! I am interested in your 9-week Data Analysis programme. Can you tell me more?");
+  window.open('https://wa.me/2349113578740?text=' + msg, '_blank');
+}
+
+var _modalCurrency = 'NGN';
+var _modalAmount = 6000000;
+var _selectedPayMethod = '';
+
+function openModal(plan, currency, amount) {
+  var el = document.getElementById('mCN');
+  if (el) el.textContent = plan || 'Dacom Digitals';
+  _modalCurrency = currency || 'NGN';
+  _modalAmount = parseInt(amount) || 6000000;
+  document.getElementById('modal').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+  var opts = document.querySelectorAll('.popt');
+  for (var i = 0; i < opts.length; i++) {
+    opts[i].classList.remove('on');
+  }
+  _selectedPayMethod = '';
+  var en = document.getElementById('enrollName');
+  if (en) en.value = '';
+  var ee = document.getElementById('enrollEmail');
+  if (ee) ee.value = '';
+}
+
+function selPay(el, method) {
+  var opts = document.querySelectorAll('.popt');
+  for (var i = 0; i < opts.length; i++) {
+    opts[i].classList.remove('on');
+  }
+  el.classList.add('on');
+  _selectedPayMethod = method || '';
+}
+
+function confirmEnroll() {
+  var n = document.getElementById('enrollName').value.trim();
+  var e = document.getElementById('enrollEmail').value.trim();
+  var sel = document.querySelector('.popt.on');
+  var plan = document.getElementById('mCN').textContent;
+  if (!n) { showToast('Please enter your name'); return; }
+  if (!e || e.indexOf('@') === -1) { showToast('Please enter a valid email'); return; }
+  if (!sel) { showToast('Please select a payment method'); return; }
+
+  if (_selectedPayMethod === 'paystack') {
+    var handler = PaystackPop.setup({
+      key: 'pk_live_YOUR_PAYSTACK_PUBLIC_KEY', // ← Replace with your Paystack public key
+      email: e,
+      amount: _modalAmount,
+      currency: _modalCurrency,
+      ref: 'DACOM-' + Date.now(),
+      metadata: { name: n, plan: plan },
+      callback: function(response) {
+        closeModal();
+        showToast('Payment successful! Reference: ' + response.reference + '. Check your email for next steps.');
+      },
+      onClose: function() {
+        showToast('Payment window closed. Select another method or try again.');
+      }
+    });
+    handler.openIframe();
+    return;
+  }
+
+  if (_selectedPayMethod === 'whatsapp') {
+    var msg = encodeURIComponent("Hi Dacom Digitals! I want to enroll in the 9-week Data Analysis programme.\n\nName: " + n + "\nEmail: " + e + "\nPlan: " + plan + "\n\nPlease guide me on payment.");
+    window.open('https://wa.me/2349113578740?text=' + msg, '_blank');
+    closeModal();
+    return;
+  }
+
+  if (_selectedPayMethod === 'transfer') {
+    showToast('Bank transfer details will be sent to ' + e + '. Check your inbox shortly.');
+    var waMsg = encodeURIComponent("Hi! I'd like to pay via Bank Transfer.\n\nName: " + n + "\nEmail: " + e + "\nPlan: " + plan);
+    window.open('https://wa.me/2349113578740?text=' + waMsg, '_blank');
+    closeModal();
+    return;
+  }
+
+  if (_selectedPayMethod === 'installment') {
+    var instMsg = encodeURIComponent("Hi! I'd like to discuss an installment payment plan.\n\nName: " + n + "\nEmail: " + e + "\nPlan: " + plan);
+    window.open('https://wa.me/2349113578740?text=' + instMsg, '_blank');
+    closeModal();
+    return;
+  }
+
+  closeModal();
+  showToast('Enrollment received! We will contact you at ' + e + ' shortly.');
+}
+</script>
+</body>
+</html>
