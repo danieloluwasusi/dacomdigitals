@@ -985,7 +985,20 @@ footer{background:var(--navy2);color:rgba(255,255,255,.55)}
     <p>Secure your spot in our 12-week programme. Starts 18th July 2026.</p>
     <div class="fg"><label>Full Name</label><input id="enrollName" placeholder="Your full name"></div>
     <div class="fg"><label>Email Address</label><input type="email" id="enrollEmail" placeholder="you@example.com"></div>
-    <button class="btn-n" style="width:100%;justify-content:center;margin-top:.5rem" onclick="confirmEnroll()">Pay with Flutterwave →</button>
+    <div class="fg"><label>Phone Number</label><input type="tel" id="enrollPhone" placeholder="+234 800 000 0000"></div>
+    <div class="fg"><label>Country</label>
+      <select id="enrollCountry" onchange="updateEnrollPrice()">
+        <option value="">— Select your country —</option>
+        <option value="NG">Nigeria</option>
+        <option value="GH">Ghana</option>
+        <option value="CM">Cameroon</option>
+        <option value="ZM">Zambia</option>
+        <option value="OTHER">Other (contact us)</option>
+      </select>
+    </div>
+    <div id="enrollPriceBox" style="display:none;background:var(--green-l);border:1px solid var(--green);border-radius:var(--r2);padding:.55rem .85rem;font-size:.82rem;font-weight:700;color:#065f46;text-align:center;margin-bottom:.5rem"></div>
+    <div id="enrollWhatsappBox" style="display:none;background:var(--gold-l);border:1px solid var(--gold);border-radius:var(--r2);padding:.55rem .85rem;font-size:.8rem;color:#8a5a00;text-align:center;margin-bottom:.5rem">We'll reach out to you on WhatsApp to complete your enrollment. 👇<br><button class="btn-n" style="margin-top:.5rem;width:100%;justify-content:center" onclick="waEnroll()">Chat on WhatsApp</button></div>
+    <button id="enrollPayBtn" class="btn-n" style="width:100%;justify-content:center;margin-top:.5rem;display:none" onclick="confirmEnroll()">Pay with Flutterwave →</button>
     <div style="margin-top:.75rem;font-size:.72rem;color:var(--ink3);text-align:center">Secure &middot; 300+ students enrolled before you</div>
   </div>
 </div>
@@ -1106,56 +1119,87 @@ function openWA() {
 }
 
 var _modalCurrency = 'NGN';
-var _modalAmount = 6000000;
+var _modalAmount = 7000000;
 var _selectedPayMethod = '';
 
 function openModal(plan, currency, amount) {
   var el = document.getElementById('mCN');
   if (el) el.textContent = plan || 'Dacom Digital Solutions';
   _modalCurrency = currency || 'NGN';
-  _modalAmount = parseInt(amount) || 6000000;
+  _modalAmount = parseInt(amount) || 7000000;
   document.getElementById('modal').classList.add('open');
 }
 
-function closeModal() {
-  document.getElementById('modal').classList.remove('open');
-  var opts = document.querySelectorAll('.popt');
-  for (var i = 0; i < opts.length; i++) {
-    opts[i].classList.remove('on');
+var _countryPricing = {
+  'NG': { currency: 'NGN', amount: 7000000, label: '₦70,000 NGN', kobo: true },
+  'GH': { currency: 'GHS', amount: 700, label: 'GHS 700', kobo: false },
+  'CM': { currency: 'XAF', amount: 35000, label: 'XAF 35,000', kobo: false },
+  'ZM': { currency: 'ZMW', amount: 1500, label: 'ZMW 1,500', kobo: false },
+};
+
+function updateEnrollPrice() {
+  var country = document.getElementById('enrollCountry').value;
+  var priceBox = document.getElementById('enrollPriceBox');
+  var waBox = document.getElementById('enrollWhatsappBox');
+  var payBtn = document.getElementById('enrollPayBtn');
+
+  if (!country) {
+    priceBox.style.display = 'none';
+    waBox.style.display = 'none';
+    payBtn.style.display = 'none';
+    return;
   }
-  _selectedPayMethod = '';
-  var en = document.getElementById('enrollName');
-  if (en) en.value = '';
-  var ee = document.getElementById('enrollEmail');
-  if (ee) ee.value = '';
+
+  if (country === 'OTHER') {
+    priceBox.style.display = 'none';
+    waBox.style.display = 'block';
+    payBtn.style.display = 'none';
+    return;
+  }
+
+  var pricing = _countryPricing[country];
+  _modalCurrency = pricing.currency;
+  _modalAmount = pricing.amount;
+  priceBox.textContent = '💰 Your price: ' + pricing.label;
+  priceBox.style.display = 'block';
+  waBox.style.display = 'none';
+  payBtn.style.display = 'flex';
 }
 
-function selPay(el, method) {
-  var opts = document.querySelectorAll('.popt');
-  for (var i = 0; i < opts.length; i++) {
-    opts[i].classList.remove('on');
-  }
-  el.classList.add('on');
-  _selectedPayMethod = method || '';
+function waEnroll() {
+  var n = document.getElementById('enrollName').value.trim();
+  var e = document.getElementById('enrollEmail').value.trim();
+  var p = document.getElementById('enrollPhone').value.trim();
+  var plan = document.getElementById('mCN').textContent;
+  var msg = encodeURIComponent("Hi Dacom Digital Solutions! I want to enroll in the 12-week Data Analysis programme.\n\nName: " + (n||'Not provided') + "\nEmail: " + (e||'Not provided') + "\nPhone: " + (p||'Not provided') + "\nPlan: " + plan + "\n\nPlease guide me on payment.");
+  window.open('https://wa.me/2349113578740?text=' + msg, '_blank');
+  closeModal();
 }
 
 function confirmEnroll() {
   var n = document.getElementById('enrollName').value.trim();
   var e = document.getElementById('enrollEmail').value.trim();
-  var sel = document.querySelector('.popt.on');
+  var p = document.getElementById('enrollPhone').value.trim();
+  var country = document.getElementById('enrollCountry').value;
   var plan = document.getElementById('mCN').textContent;
   if (!n) { showToast('Please enter your name'); return; }
   if (!e || e.indexOf('@') === -1) { showToast('Please enter a valid email'); return; }
+  if (!p) { showToast('Please enter your phone number'); return; }
+  if (!country) { showToast('Please select your country'); return; }
+
+  var pricing = _countryPricing[country];
+  var amount = pricing.kobo ? pricing.amount / 100 : pricing.amount;
 
   FlutterwaveCheckout({
-      public_key: 'FLWPUBK-e3626b60a25e0acd00eb8e409c7dad39-X',
+      public_key: 'FLWPUBK-REPLACE-WITH-YOUR-PUBLIC-KEY',
       tx_ref: 'DACOM-FLW-' + Date.now(),
-      amount: _modalAmount / 100,
-      currency: _modalCurrency,
+      amount: amount,
+      currency: pricing.currency,
       payment_options: 'card, banktransfer, ussd, mobilemoney',
       customer: {
         email: e,
         name: n,
+        phone_number: p,
       },
       customizations: {
         title: 'Dacom Digital Solutions',
@@ -1171,10 +1215,31 @@ function confirmEnroll() {
         }
       },
       onclose: function() {
-        showToast('Payment window closed. Select a method or try again.');
+        showToast('Payment window closed. Try again.');
       }
     });
 }
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+  _selectedPayMethod = '';
+  var fields = ['enrollName','enrollEmail','enrollPhone'];
+  fields.forEach(function(id) { var el = document.getElementById(id); if (el) el.value = ''; });
+  var sel = document.getElementById('enrollCountry'); if (sel) sel.value = '';
+  var pb = document.getElementById('enrollPriceBox'); if (pb) pb.style.display = 'none';
+  var wb = document.getElementById('enrollWhatsappBox'); if (wb) wb.style.display = 'none';
+  var btn = document.getElementById('enrollPayBtn'); if (btn) btn.style.display = 'none';
+}
+
+function selPay(el, method) {
+  var opts = document.querySelectorAll('.popt');
+  for (var i = 0; i < opts.length; i++) {
+    opts[i].classList.remove('on');
+  }
+  el.classList.add('on');
+  _selectedPayMethod = method || '';
+}
+
 </script>
 </body>
 </html>
