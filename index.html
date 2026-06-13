@@ -987,8 +987,7 @@ footer{background:var(--navy2);color:rgba(255,255,255,.55)}
     <div class="fg"><label>Email Address</label><input type="email" id="enrollEmail" placeholder="you@example.com"></div>
     <div style="font-size:.75rem;font-weight:700;color:var(--ink2);margin-bottom:.55rem">Payment Method</div>
     <div class="pay-g">
-      <div class="popt" onclick="selPay(this,'paystack')"><div class="poi">💳</div><strong>Card / Bank</strong><span>Pay via Paystack</span></div>
-      <div class="popt" onclick="selPay(this,'transfer')"><div class="poi">&#127974;</div><strong>Bank Transfer</strong><span>Local bank</span></div>
+            <div class="popt" onclick="selPay(this,'transfer')"><div class="poi">&#127974;</div><strong>Bank Transfer</strong><span>Local bank</span></div>
       <div class="popt" onclick="selPay(this,'whatsapp')"><div class="poi">&#128172;</div><strong>WhatsApp</strong><span>Pay via chat</span></div>
       <div class="popt" onclick="selPay(this,'installment')"><div class="poi">&#128197;</div><strong>Installment</strong><span>Split payment</span></div>
     </div>
@@ -999,7 +998,6 @@ footer{background:var(--navy2);color:rgba(255,255,255,.55)}
 
 <div class="toast" id="toast"></div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://js.paystack.co/v1/inline.js" async></script>
 <script>
 var pgs = ['home','about','courses','testimonials','blog','contact'];
 
@@ -1154,26 +1152,6 @@ function confirmEnroll() {
   if (!n) { showToast('Please enter your name'); return; }
   if (!e || e.indexOf('@') === -1) { showToast('Please enter a valid email'); return; }
   if (!sel) { showToast('Please select a payment method'); return; }
-
-  if (_selectedPayMethod === 'paystack') {
-    var handler = PaystackPop.setup({
-      key: 'FLWPUBK-e3626b60a25e0acd00eb8e409c7dad39-X', // ← Replace with your Paystack public key
-      email: e,
-      amount: _modalAmount,
-      currency: _modalCurrency,
-      ref: 'DACOM-' + Date.now(),
-      metadata: { name: n, plan: plan },
-      callback: function(response) {
-        closeModal();
-        showToast('Payment successful! Reference: ' + response.reference + '. Check your email for next steps.');
-      },
-      onClose: function() {
-        showToast('Payment window closed. Select another method or try again.');
-      }
-    });
-    handler.openIframe();
-    return;
-  }
 
   if (_selectedPayMethod === 'whatsapp') {
     var msg = encodeURIComponent("Hi Dacom Digital Solutions! I want to enroll in the 12-week Data Analysis programme.\n\nName: " + n + "\nEmail: " + e + "\nPlan: " + plan + "\n\nPlease guide me on payment.");
