@@ -985,19 +985,14 @@ footer{background:var(--navy2);color:rgba(255,255,255,.55)}
     <p>Secure your spot in our 12-week programme. Starts 18th July 2026.</p>
     <div class="fg"><label>Full Name</label><input id="enrollName" placeholder="Your full name"></div>
     <div class="fg"><label>Email Address</label><input type="email" id="enrollEmail" placeholder="you@example.com"></div>
-    <div style="font-size:.75rem;font-weight:700;color:var(--ink2);margin-bottom:.55rem">Payment Method</div>
-    <div class="pay-g">
-            <div class="popt" onclick="selPay(this,'transfer')"><div class="poi">&#127974;</div><strong>Bank Transfer</strong><span>Local bank</span></div>
-      <div class="popt" onclick="selPay(this,'whatsapp')"><div class="poi">&#128172;</div><strong>WhatsApp</strong><span>Pay via chat</span></div>
-      <div class="popt" onclick="selPay(this,'installment')"><div class="poi">&#128197;</div><strong>Installment</strong><span>Split payment</span></div>
-    </div>
-    <button class="btn-n" style="width:100%;justify-content:center;margin-top:.5rem" onclick="confirmEnroll()">Confirm My Enrollment</button>
+    <button class="btn-n" style="width:100%;justify-content:center;margin-top:.5rem" onclick="confirmEnroll()">Pay with Flutterwave →</button>
     <div style="margin-top:.75rem;font-size:.72rem;color:var(--ink3);text-align:center">Secure &middot; 300+ students enrolled before you</div>
   </div>
 </div>
 
 <div class="toast" id="toast"></div>
 
+<script src="https://checkout.flutterwave.com/v3.js"></script>
 <script>
 var pgs = ['home','about','courses','testimonials','blog','contact'];
 
@@ -1151,32 +1146,34 @@ function confirmEnroll() {
   var plan = document.getElementById('mCN').textContent;
   if (!n) { showToast('Please enter your name'); return; }
   if (!e || e.indexOf('@') === -1) { showToast('Please enter a valid email'); return; }
-  if (!sel) { showToast('Please select a payment method'); return; }
 
-  if (_selectedPayMethod === 'whatsapp') {
-    var msg = encodeURIComponent("Hi Dacom Digital Solutions! I want to enroll in the 12-week Data Analysis programme.\n\nName: " + n + "\nEmail: " + e + "\nPlan: " + plan + "\n\nPlease guide me on payment.");
-    window.open('https://wa.me/2349113578740?text=' + msg, '_blank');
-    closeModal();
-    return;
-  }
-
-  if (_selectedPayMethod === 'transfer') {
-    showToast('Bank transfer details will be sent to ' + e + '. Check your inbox shortly.');
-    var waMsg = encodeURIComponent("Hi! I'd like to pay via Bank Transfer.\n\nName: " + n + "\nEmail: " + e + "\nPlan: " + plan);
-    window.open('https://wa.me/2349113578740?text=' + waMsg, '_blank');
-    closeModal();
-    return;
-  }
-
-  if (_selectedPayMethod === 'installment') {
-    var instMsg = encodeURIComponent("Hi! I'd like to discuss an installment payment plan.\n\nName: " + n + "\nEmail: " + e + "\nPlan: " + plan);
-    window.open('https://wa.me/2349113578740?text=' + instMsg, '_blank');
-    closeModal();
-    return;
-  }
-
-  closeModal();
-  showToast('Enrollment received! We will contact you at ' + e + ' shortly.');
+  FlutterwaveCheckout({
+      public_key: 'FLWPUBK-e3626b60a25e0acd00eb8e409c7dad39-X',
+      tx_ref: 'DACOM-FLW-' + Date.now(),
+      amount: _modalAmount / 100,
+      currency: _modalCurrency,
+      payment_options: 'card, banktransfer, ussd, mobilemoney',
+      customer: {
+        email: e,
+        name: n,
+      },
+      customizations: {
+        title: 'Dacom Digital Solutions',
+        description: 'Enrollment: ' + plan,
+        logo: '',
+      },
+      callback: function(response) {
+        closeModal();
+        if (response.status === 'successful') {
+          showToast('Payment successful! Ref: ' + response.transaction_id + '. Check your email for next steps.');
+        } else {
+          showToast('Payment was not completed. Please try again.');
+        }
+      },
+      onclose: function() {
+        showToast('Payment window closed. Select a method or try again.');
+      }
+    });
 }
 </script>
 </body>
